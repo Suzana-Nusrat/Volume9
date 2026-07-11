@@ -4691,8 +4691,12 @@ svg {
   }
 
   .network-title {
-    font-size: clamp(36px, 11.3vw, 46px);
+    font-size: clamp(32px, 10vw, 40px);
     line-height: 1.04;
+  }
+
+  .network-title span {
+    white-space: nowrap;
   }
 
   .terminal-title {

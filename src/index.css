@@ -4535,7 +4535,8 @@ svg {
   .assets-hero h1,
   .security-copy h1,
   .docs-copy h1 {
-    overflow-wrap: anywhere;
+    overflow-wrap: normal;
+    word-break: normal;
   }
 
   .terminal-code-card,
@@ -4630,10 +4631,6 @@ svg {
     min-width: 0;
   }
 
-  .docs-title-line {
-    white-space: normal;
-  }
-
   .docs-transmission-form > p {
     white-space: normal;
     line-height: 1.5;
@@ -4682,6 +4679,20 @@ svg {
   .network-logo-text small,
   .network-footer-brand small {
     letter-spacing: 3px;
+  }
+
+  .network-title,
+  .terminal-title,
+  .operations-copy h1,
+  .assets-hero h1,
+  .security-copy h1 {
+    font-size: clamp(42px, 13.5vw, 58px);
+    line-height: 1.05;
+  }
+
+  .docs-copy h1 {
+    font-size: clamp(34px, 9.5vw, 43px);
+    line-height: 1.22;
   }
 
   .terminal-config-code,

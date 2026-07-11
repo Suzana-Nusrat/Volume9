@@ -4053,7 +4053,8 @@ body {
   }
 
   .network-title {
-    font-size: clamp(48px, 16vw, 74px);
+    font-size: clamp(42px, 14vw, 62px);
+    line-height: 1.03;
   }
 
   .network-lower {
@@ -4122,7 +4123,8 @@ body {
   }
 
   .terminal-title {
-    font-size: clamp(48px, 16vw, 74px);
+    font-size: clamp(43px, 14vw, 64px);
+    line-height: 1.03;
   }
 
   .terminal-copy p {
@@ -4681,13 +4683,21 @@ svg {
     letter-spacing: 3px;
   }
 
-  .network-title,
-  .terminal-title,
   .operations-copy h1,
   .assets-hero h1,
   .security-copy h1 {
     font-size: clamp(42px, 13.5vw, 58px);
     line-height: 1.05;
+  }
+
+  .network-title {
+    font-size: clamp(36px, 11.3vw, 46px);
+    line-height: 1.04;
+  }
+
+  .terminal-title {
+    font-size: clamp(37px, 11.5vw, 47px);
+    line-height: 1.04;
   }
 
   .docs-copy h1 {

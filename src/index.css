@@ -4691,7 +4691,7 @@ svg {
   }
 
   .network-title {
-    font-size: clamp(30px, 10vw, 38px);
+    font-size: clamp(30px, 8vw, 38px);
     line-height: 1.04;
   }
 

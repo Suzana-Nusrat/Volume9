@@ -4435,6 +4435,48 @@ svg {
     gap: 20px;
   }
 
+  .network-menu-toggle {
+    display: grid;
+    justify-self: end;
+  }
+
+  .network-nav-links {
+    display: none;
+    grid-column: 1 / -1;
+    width: 100%;
+    min-width: 0;
+    padding-top: 8px;
+    gap: 0;
+  }
+
+  .network-nav.menu-open .network-nav-links {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .network-nav-links button {
+    width: 100%;
+    min-height: 42px;
+    border-bottom: 1px solid rgba(255, 170, 166, 0.12);
+    text-align: left;
+    font-size: 12px;
+    letter-spacing: 1.4px;
+  }
+
+  .network-execute {
+    display: none;
+    grid-column: 1 / -1;
+    width: 100%;
+    height: 42px;
+    margin-top: 4px;
+    justify-self: stretch;
+    font-size: 11px;
+  }
+
+  .network-nav.menu-open .network-execute {
+    display: block;
+  }
+
   .network-nav-links {
     min-width: 0;
   }
@@ -4459,6 +4501,36 @@ svg {
   .docs-infrastructure-inner,
   .docs-contact-inner {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 901px) {
+  .network-nav {
+    padding-inline: 40px;
+  }
+
+  .network-hero,
+  .terminal-hero,
+  .operations-hero-inner,
+  .assets-hero-inner,
+  .security-hero-inner,
+  .docs-hero-inner {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .network-capabilities,
+  .terminal-components,
+  .terminal-orchestration,
+  .terminal-protocol,
+  .enterprise-grid-section,
+  .synaptic-section,
+  .security-suite,
+  .security-engineering,
+  .docs-infrastructure,
+  .docs-contact {
+    padding-left: 48px;
+    padding-right: 48px;
   }
 }
 
@@ -4584,6 +4656,92 @@ svg {
   }
 }
 
+@media (max-width: 820px) {
+  .network-lower,
+  .terminal-body,
+  .operations-hero-grid,
+  .synaptic-inner,
+  .assets-product-grid,
+  .assets-analytics-card,
+  .security-hero-grid,
+  .security-suite-grid,
+  .security-engineering-inner,
+  .docs-hero-inner,
+  .docs-infrastructure-head,
+  .docs-contact-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .network-code-card,
+  .terminal-code-card,
+  .operations-latency-card,
+  .docs-location-card {
+    width: min(100%, 380px);
+  }
+
+  .network-capabilities-grid,
+  .terminal-component-grid,
+  .enterprise-grid-layout,
+  .security-feature-grid,
+  .docs-infra-grid,
+  .docs-origin-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .network-feature-ai,
+  .network-feature-streams,
+  .network-feature-k8s,
+  .network-feature-critical,
+  .enterprise-matrix-card,
+  .enterprise-feed-card {
+    grid-column: auto;
+  }
+
+  .assets-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .docs-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .docs-transmission-form .docs-form-row label + label {
+    margin-top: 28px;
+  }
+}
+
+@media (max-width: 700px) {
+  .network-hero,
+  .terminal-hero,
+  .operations-hero-inner,
+  .assets-hero-inner,
+  .security-hero-inner,
+  .docs-hero-inner {
+    padding-top: 48px;
+    padding-bottom: 64px;
+  }
+
+  .security-hero-inner {
+    padding-top: 96px;
+  }
+
+  .operations-hero,
+  .security-hero,
+  .assets-hero {
+    min-height: auto;
+  }
+
+  .network-title,
+  .terminal-title,
+  .operations-copy h1,
+  .assets-hero h1,
+  .security-copy h1,
+  .docs-copy h1 {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 560px) {
   .network-nav-links {
     grid-template-columns: 1fr;
@@ -4691,7 +4849,7 @@ svg {
   }
 
   .network-title {
-    font-size: clamp(30px, 8vw, 38px);
+    font-size: clamp(32px, 10vw, 40px);
     line-height: 1.04;
   }
 
@@ -4722,5 +4880,161 @@ svg {
   .docs-contact-list strong {
     font-size: 14px;
     overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 380px) {
+  .network-nav,
+  .network-hero,
+  .network-capabilities,
+  .network-telemetry,
+  .network-deployment,
+  .terminal-hero,
+  .terminal-components,
+  .terminal-orchestration,
+  .terminal-protocol,
+  .terminal-scale,
+  .operations-hero-inner,
+  .enterprise-grid-section,
+  .synaptic-section,
+  .assets-hero-inner,
+  .assets-products,
+  .assets-interface,
+  .security-hero-inner,
+  .security-suite,
+  .security-engineering,
+  .security-final-cta,
+  .docs-hero-inner,
+  .docs-infrastructure,
+  .docs-contact,
+  .network-footer {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .network-logo img,
+  .network-footer-logo {
+    width: 52px;
+    height: 52px;
+  }
+
+  .network-logo-text span,
+  .network-footer-brand strong {
+    font-size: 20px;
+  }
+
+  .network-logo-text small,
+  .network-footer-brand small {
+    font-size: 7px;
+    letter-spacing: 2.4px;
+  }
+
+  .network-title {
+    font-size: clamp(29px, 9.1vw, 34px);
+  }
+
+  .terminal-title {
+    font-size: clamp(31px, 9.5vw, 36px);
+  }
+
+  .operations-copy h1,
+  .assets-hero h1,
+  .security-copy h1 {
+    font-size: clamp(36px, 12vw, 44px);
+  }
+
+  .network-description,
+  .terminal-copy p,
+  .operations-copy > p,
+  .security-copy p,
+  .docs-copy > p:not(.docs-eyebrow) {
+    font-size: 15px;
+  }
+
+  .network-deployment-actions button,
+  .terminal-scale-actions button,
+  .operations-actions button,
+  .security-final-actions button {
+    padding-inline: 16px;
+    letter-spacing: 2px;
+  }
+
+  .assets-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .network-footer-bottom,
+  .network-footer-links {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .network-footer-links {
+    gap: 14px 20px;
+  }
+}
+
+/* Final responsive navigation contract.
+   Desktop keeps full links; tablet and below always use the bar menu. */
+@media (max-width: 1024px) {
+  .network-nav {
+    min-height: auto;
+    padding: 20px clamp(18px, 4vw, 40px);
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .network-menu-toggle {
+    display: grid;
+    justify-self: end;
+  }
+
+  .network-nav-links,
+  .network-execute {
+    display: none;
+  }
+
+  .network-nav.menu-open .network-nav-links {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding-top: 8px;
+    gap: 0;
+  }
+
+  .network-nav.menu-open .network-execute {
+    grid-column: 1 / -1;
+    display: block;
+    width: 100%;
+    height: 42px;
+    justify-self: stretch;
+    margin-top: 4px;
+  }
+
+  .network-nav-links button {
+    width: 100%;
+    min-height: 42px;
+    border-bottom: 1px solid rgba(255, 170, 166, 0.12);
+    text-align: left;
+    font-size: clamp(10px, 2.8vw, 12px);
+    letter-spacing: 1.4px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .network-menu-toggle {
+    display: none;
+  }
+
+  .network-nav-links {
+    display: flex;
+  }
+
+  .network-execute {
+    display: block;
   }
 }

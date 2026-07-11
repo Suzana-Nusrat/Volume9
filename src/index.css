@@ -296,7 +296,7 @@ body {
   margin: 0;
   color: #f3f1f1;
   font-family: "Arial Narrow", "Roboto Condensed", "Helvetica Neue", Arial, sans-serif;
-  font-size: clamp(62px, 9.55vw, 101px);
+  font-size: clamp(60px, 9.5vw, 100px);
   font-stretch: condensed;
   font-weight: 800;
   line-height: 1.04;

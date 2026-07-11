@@ -4362,3 +4362,259 @@ body {
     font-size: 13px;
   }
 }
+
+/* Responsive polish: keep the desktop composition intact while preventing
+   narrow screens from clipping fixed-width visual sections. */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+.network-nav,
+.network-page,
+.terminal-page,
+.operations-page,
+.assets-page,
+.security-page,
+.docs-page,
+.network-footer {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  #root {
+    width: 100%;
+  }
+
+  .network-nav {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 20px;
+  }
+
+  .network-nav-links {
+    min-width: 0;
+  }
+
+  .network-hero-inner,
+  .network-capabilities-grid,
+  .network-telemetry-inner,
+  .network-deployment-panel,
+  .terminal-hero-inner,
+  .terminal-components-inner,
+  .terminal-orchestration-inner,
+  .terminal-protocol-inner,
+  .enterprise-grid-inner,
+  .synaptic-inner,
+  .assets-hero-inner,
+  .assets-products-inner,
+  .assets-interface-inner,
+  .security-hero-inner,
+  .security-suite-inner,
+  .security-engineering-inner,
+  .docs-hero-inner,
+  .docs-infrastructure-inner,
+  .docs-contact-inner {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .network-nav {
+    padding: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  .network-execute {
+    justify-self: start;
+  }
+
+  .network-nav-links {
+    justify-content: flex-start;
+    gap: 14px 18px;
+  }
+
+  .network-logo img,
+  .network-footer-logo {
+    width: 64px;
+    height: 64px;
+  }
+
+  .network-logo-text span,
+  .network-footer-brand strong {
+    font-size: 27px;
+  }
+
+  .network-logo-text small,
+  .network-footer-brand small {
+    font-size: 8px;
+    letter-spacing: 4px;
+  }
+
+  .network-title,
+  .terminal-title,
+  .operations-copy h1,
+  .assets-hero h1,
+  .security-copy h1,
+  .docs-copy h1 {
+    overflow-wrap: anywhere;
+  }
+
+  .terminal-code-card,
+  .terminal-config-window,
+  .enterprise-feed-card,
+  .docs-transmission-form {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .assets-analytics-visual,
+  .assets-analytics-copy,
+  .security-analytics-content,
+  .security-product-card,
+  .docs-contact-info,
+  .docs-transmission-form {
+    min-width: 0;
+  }
+
+  .assets-analytics-card,
+  .security-suite-grid,
+  .docs-contact-inner {
+    width: 100%;
+  }
+
+  .network-footer-bottom {
+    align-items: flex-start;
+  }
+
+  .operations-latency-label {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 560px) {
+  .network-nav-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, max-content));
+    justify-content: start;
+  }
+
+  .network-nav-links button {
+    font-size: 9px;
+  }
+
+  .network-description,
+  .terminal-copy p,
+  .operations-copy > p,
+  .assets-hero-copy,
+  .security-copy > p,
+  .docs-copy > p:not(.docs-eyebrow) {
+    max-width: 100%;
+  }
+
+  .network-code-card,
+  .terminal-code-card,
+  .operations-latency-card,
+  .assets-red-feed,
+  .security-metrics,
+  .docs-location-card {
+    width: 100%;
+  }
+
+  .enterprise-security-card {
+    min-height: 248px;
+  }
+
+  .enterprise-security-card p {
+    max-width: 100%;
+  }
+
+  .security-product-card {
+    min-height: auto;
+  }
+
+  .security-product-card button,
+  .assets-trip-card button,
+  .network-deployment-actions button,
+  .operations-actions button,
+  .terminal-scale-actions button,
+  .security-final-actions button {
+    min-width: 0;
+  }
+
+  .docs-title-line {
+    white-space: normal;
+  }
+
+  .docs-transmission-form > p {
+    white-space: normal;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 420px) {
+  .network-nav,
+  .network-hero,
+  .network-capabilities,
+  .network-telemetry,
+  .network-deployment,
+  .terminal-hero,
+  .terminal-components,
+  .terminal-orchestration,
+  .terminal-protocol,
+  .terminal-scale,
+  .operations-hero-inner,
+  .enterprise-grid-section,
+  .synaptic-section,
+  .assets-hero-inner,
+  .assets-products,
+  .assets-interface,
+  .security-hero-inner,
+  .security-suite,
+  .security-engineering,
+  .security-final-cta,
+  .docs-hero-inner,
+  .docs-infrastructure,
+  .docs-contact,
+  .network-footer {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .network-nav-links {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 16px;
+  }
+
+  .network-logo-text span,
+  .network-footer-brand strong {
+    font-size: 22px;
+  }
+
+  .network-logo-text small,
+  .network-footer-brand small {
+    letter-spacing: 3px;
+  }
+
+  .terminal-config-code,
+  .enterprise-feed-lines {
+    font-size: 9px;
+  }
+
+  .docs-contact-list article {
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .docs-contact-list strong {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+  }
+}

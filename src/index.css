@@ -129,14 +129,14 @@ code {
 
 body {
   min-width: 320px;
-  background: #ded9d9;
+  background: #201e1e;
 }
 
 #root {
   overflow-x: clip;
   overflow-y: visible;
   background: #101010;
-  border-color: #ded9d9;
+  border-color: #201e1e;
 }
 
 @media (max-width: 1126px) {

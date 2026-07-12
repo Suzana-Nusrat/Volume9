@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -53,7 +65,7 @@
 }
 
 #root {
-  width: 1126px;
+  width: min(1126px, 100%);
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -66,6 +78,9 @@
 
 body {
   margin: 0;
+  width: 100%;
+  min-height: 100svh;
+  overflow-x: hidden;
 }
 
 h1,
@@ -118,9 +133,20 @@ body {
 }
 
 #root {
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
   background: #101010;
   border-color: #ded9d9;
+}
+
+@media (max-width: 1126px) {
+  body {
+    background: #101010;
+  }
+
+  #root {
+    border-inline: 0;
+  }
 }
 
 .network-nav,
